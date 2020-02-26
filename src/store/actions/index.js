@@ -4,20 +4,14 @@ import {
     GET_TEAM,
     GET_TEAMS_ERROR,
     GET_TEAM_ERROR
-} from './types.js';
+} from '../../store/types.js';
 
-export const getTeams = () => async dispatch => {
-    try {
-        const res = await axios.get('https://tempo-exercises.herokuapp.com/rest/v1/teams');
-        
-        dispatch({
-            type: GET_TEAMS,
-            payload: res.data
-        });
-    } catch(err) {
-        dispatch({
-            type: GET_TEAMS_ERROR,
-            payload: {status: err.response.status}
-        });
+export default function getTeams(){
+    const request = axios.get('https://tempo-exercises.herokuapp.com/rest/v1/teams')
+    .then(response => response.data);
+
+    return{
+        type: GET_TEAMS,
+        payload: request
     }
-};
+}
