@@ -1,0 +1,15 @@
+export const GET_TEAMS_ERROR = 'GET_TEAMS_ERROR';
+export const TEAMS_IS_LOADING = 'TEAMS_IS_LOADING';
+export const GET_TEAMS= 'GET_TEAMS';
+
+export const GET_MEMBERS_ERROR = 'GET_MEMBERS_ERROR';
+export const MEMBERS_IS_LOADING = 'MEMBERS_IS_LOADING';
+export const GET_MEMBERS = 'GET_MEMBERS';
+
+export const GET_TEAM_ERROR = 'GET_TEAM_ERROR';
+export const TEAM_IS_LOADING = 'TEAM_IS_LOADING';
+export const GET_TEAM = 'GET_TEAM';
+
+export const GET_MEMBER_ERROR = 'GET_MEMBER';
+export const MEMBER_IS_LOADING = 'MEMBER_IS_LOADING';
+export const GET_MEMBER = 'GET_MEMBER';
