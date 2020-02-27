@@ -10,7 +10,7 @@ const Routes = () => {
                 <Switch>
                     <Route exact path = '/' component={ home } />
                     <Route exact path = '/teamsDirectory' component={ teamsList } />
-                    <Route exact path = '/usersDirectory' component={ usersList } />
+                    <Route exact path = '/teamMembers/:id' component={ usersList } />
                 </Switch>
             </BrowserRouter>
         )

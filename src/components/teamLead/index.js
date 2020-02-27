@@ -6,13 +6,12 @@ import Spinner from 'react-spinner-material';
 import getTeams from '../../store/actions/teamActions';
 import { Link } from 'react-router-dom';
 import {
-  Container, Row, Col, Navbar, NavbarBrand, Nav, NavItem, NavLink, Card, CardBody, CardTitle, CardSubtitle, CardText, Button
+  Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button
 } from 'reactstrap';
 
 class Teams extends Component {
     state = {
-        teams: [],
-        users: []
+        teamLead: null
     }
     componentDidMount(){
         axios.get("https://tempo-exercises.herokuapp.com/rest/v1/teams")
@@ -37,7 +36,7 @@ class Teams extends Component {
                             <div className = 'CardBody'>
                                 <h5 className = 'CardTitle'>Team Name: {team.name}</h5>
                                 <h6 className = 'CardSubtitle'>Team Lead Id: {team.teamLead}</h6>
-                                <li><Link to={`/teamMembers/${team.id}`}>Click to see Team Member List</Link></li>
+
                             </div>
                         </div>
                     )

@@ -6,6 +6,10 @@ import Spinner from 'react-spinner-material';
 import getMembers from '../../store/actions/userActions';
 
 class Members extends Component {
+    state = {
+        teams: []
+    }
+
     componentDidMount(){
         axios.get("https://tempo-exercises.herokuapp.com/rest/v1/users")
         .then(res => {
@@ -14,11 +18,12 @@ class Members extends Component {
     }
 
     render(){
-    return (
-        <div>
-        This is the list of members
-        </div>
-        )
+        const { users } = this.state;
+        return (
+            <div>
+            This is the list of members
+            </div>
+            )
     }
 }
 Members.propTypes = {
