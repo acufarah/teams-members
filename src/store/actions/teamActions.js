@@ -3,11 +3,7 @@ import {
     GET_TEAMS,
     GET_TEAM,
     GET_TEAMS_ERROR,
-    GET_TEAM_ERROR,
-    GET_MEMBERS,
-    GET_MEMBER,
-    GET_MEMBERS_ERROR,
-    GET_MEMBER_ERROR,
+    GET_TEAM_ERROR
 } from '../../store/types.js';
 
 export default function getTeams(){

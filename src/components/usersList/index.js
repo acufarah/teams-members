@@ -3,11 +3,11 @@ import axios from 'axios';
 import PropTypes from 'proptypes';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinner-material';
-import getTeams from '../../store/actions/teamActions';
+import getMembers from '../../store/actions/userActions';
 
-class Teams extends Component {
+class Members extends Component {
     componentDidMount(){
-        axios.get("https://tempo-exercises.herokuapp.com/rest/v1/teams")
+        axios.get("https://tempo-exercises.herokuapp.com/rest/v1/users")
         .then(res => {
             console.log(res)
         })
@@ -16,19 +16,17 @@ class Teams extends Component {
     render(){
     return (
         <div>
-        This is the list of teams
+        This is the list of members
         </div>
         )
     }
 }
-
-Teams.propTypes = {
-    getTeams: PropTypes.func.isRequired,
-
+Members.propTypes = {
+    getMembers: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
-    teams: state.teams
+    members: state.members
 })
 
-export default connect(mapStateToProps, { getTeams })(Teams);
+export default connect(mapStateToProps, { getMembers })(Members);
