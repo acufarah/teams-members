@@ -22,7 +22,7 @@ class Users extends Component {
         const userListings = users.length ? (
                 users.map( user => {
                     return (
-                        <div className = 'card' key={user.userId}>
+                        <div className="card full-height shadow-lg p-3 mb-5 bg-white rounded" key={user.userId}>
                             <div className = 'card-body'>
                                 <h5 className = 'card-title'>User id: {user.userId}</h5>
                                 <h6 className = 'card-subtitle'>Team id: {user.teamId}</h6>
@@ -33,7 +33,7 @@ class Users extends Component {
             ) : 
             (
                 <div className= 'center'>
-                    No users found.
+                    Loading Users
                 </div>
             )
         return (

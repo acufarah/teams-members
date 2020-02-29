@@ -31,9 +31,9 @@ class Members extends Component {
                 const memberListings = realMembers.length ? (
                 realMembers.map( member => {
                     return (
-                        <div className = 'Card' key={member.userId}>
-                            <div className = 'CardBody'>
-                                <h5 className = 'CardTitle'>Member id: {member.userId}</h5>
+                        <div className="card full-height shadow-lg p-3 mb-5 bg-white rounded" key={member.userId}>
+                            <div className = 'card-body'>
+                                <h5 className = 'card-title'>Member id: {member.userId}</h5>
                             </div>
                         </div>
                     )
@@ -41,7 +41,7 @@ class Members extends Component {
             ) : 
             (
                 <div className= 'center'>
-                    No members found.
+                    Loading Members.
                 </div>
             )
         return (

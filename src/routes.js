@@ -24,7 +24,7 @@ const Routes = () => {
                         <Route exact path = '/teamMembers/:id/:name' component={ usersList } />
                         <Route exact path = '/searchTeams' component={ searchTeams } />
                         <Route exact path = '/searchUsers' component={ searchMembers } />
-                        <Route exact path = '/userInfo/:userId/:teamId' component={ userInfo } />
+                        // <Route exact path = '/userInfo/:userId/:teamId' component={ userInfo } />
                         <Route exact path = '/userDirectory' component={ users } />
                     </Switch>
                     </div>

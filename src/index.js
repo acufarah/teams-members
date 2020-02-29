@@ -7,10 +7,4 @@ import { Provider } from 'react-redux';
 import store from './store';
 import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(
-    // <Provider store= {store}>
-    //     <BrowserRouter>
-    //         <Routes />
-    //     </BrowserRouter>
-    // </Provider>
-    <Routes />, document.getElementById('root'));
+ReactDOM.render(<Routes />, document.getElementById('root'));

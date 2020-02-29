@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 function NavBar(props){
     return(
-        <nav className= "navbar navbar-expand-md navbar-dark bg-primary mb-4">
+        <nav className= "navbar navbar-expand-md navbar-dark bg-success mb-4">
         <div className='container'>
             <Link to='/' className='navbar-brand'>
                 Teams/Users
@@ -26,6 +26,9 @@ function NavBar(props){
             <ul className= 'navbar-nav ml-auto'>
                 <li className='nav-item'>
                         <Link to='/teamsDirectory' className='nav-link'>Teams Directory</Link>
+                </li>
+                <li className='nav-item'>
+                        <Link to='/userDirectory' className='nav-link'>User Directory</Link>
                 </li>
                 <li className='nav-item'>
                         <Link to='/searchTeams' className='nav-link'>Team Search</Link>

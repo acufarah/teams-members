@@ -36,8 +36,8 @@ class SearchTeams extends Component {
       borderRadius:'10px',
       position:'relative',
       left:'10vh',
-      height:'3vh',
-      width:'20vh',
+      height:'8vh',
+      width:'40vh',
       marginTop:'5vh',
       marginBottom:'10vh'
     }
@@ -50,20 +50,22 @@ class SearchTeams extends Component {
     }).map(data=>{
       return(
       <div>
-        <ul>
-          <li style={{position:'relative',left:'10vh'}}>
-            <span style={styleInfo}>{data.name}</span>
-            <span style={styleInfo}>{data.id}</span>
-            <span style={styleInfo}>{data.teamLead}</span>
-          </li>
-        </ul>
+        <div className="card full-height shadow-lg p-3 mb-5 bg-white rounded" key={data.id}>
+          <div className="card-body">
+            <h5 className="card-title">{data.name}</h5>
+            <br/>
+            <h5 className="card-subtitle">Team Id: {data.id}</h5>
+            <br/>
+            <h5 className="card-subtitle">Team Lead Id: {data.teamLead}</h5>
+          </div>
+        </div>
       </div>
       )
     })
 
     return (
       <div>
-      <input type="text" placeholder="Enter item to be searched" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
+      <input type="text" placeholder="Enter name of group to be searched" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
       {items}
       </div>
     )

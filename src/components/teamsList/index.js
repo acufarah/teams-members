@@ -33,7 +33,7 @@ class Teams extends Component {
         const teamListings = teams.length ? (
                 teams.map( team => {
                     return (
-                        <div className = 'card' key={team.id}>
+                        <div className="card full-height shadow-lg p-3 mb-5 bg-white rounded" key={team.id}>
                             <div className = 'card-body'>
                                 <ul>
                                     <h5 className = 'card-title'>Team Name: {team.name}</h5>
@@ -47,7 +47,7 @@ class Teams extends Component {
             ) : 
             (
                 <div className= 'center'>
-                    No team listings yet.
+                    Loading Team Listings.
                 </div>
             )
     return (
