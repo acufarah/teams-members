@@ -7,21 +7,49 @@ import getMembers from '../../store/actions/userActions';
 
 class Members extends Component {
     state = {
-        teams: []
+        members: []
     }
 
     componentDidMount(){
-        axios.get("https://tempo-exercises.herokuapp.com/rest/v1/users")
-        .then(res => {
-            console.log(res)
+        axios.get("https://tempo-exercises.herokuapp.com/rest/v1/users").then(res => {
+            console.log(res);
+            this.setState({members: res.data})
         })
     }
 
     render(){
-        const { users } = this.state;
+        const { members } = this.state;
+        console.log(members);
+        const teamName = this.props.match.params.name;
+        const teamId= this.props.match.params.id;
+        console.log(teamName);
+        console.log(teamId);
+        const realMembers = members.filter(function(member){
+            return member.teamId=== teamId;
+        });
+        console.log(realMembers);
+                const memberListings = realMembers.length ? (
+                realMembers.map( member => {
+                    return (
+                        <div className = 'Card' key={member.userId}>
+                            <div className = 'CardBody'>
+                                <h5 className = 'CardTitle'>Member id: {member.userId}</h5>
+                            </div>
+                        </div>
+                    )
+                })
+            ) : 
+            (
+                <div className= 'center'>
+                    No members found.
+                </div>
+            )
         return (
             <div>
-            This is the list of members
+                <h1>{teamName}</h1>
+                    <h4>
+                    {memberListings}
+                    </h4>
             </div>
             )
     }

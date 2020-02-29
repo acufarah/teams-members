@@ -8,9 +8,9 @@ import store from './store';
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
-    <Provider store= {store}>
-        <BrowserRouter>
-            <Routes />
-        </BrowserRouter>
-    </Provider>
-    , document.getElementById('root'));
+    // <Provider store= {store}>
+    //     <BrowserRouter>
+    //         <Routes />
+    //     </BrowserRouter>
+    // </Provider>
+    <Routes />, document.getElementById('root'));

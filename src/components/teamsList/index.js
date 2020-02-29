@@ -33,11 +33,13 @@ class Teams extends Component {
         const teamListings = teams.length ? (
                 teams.map( team => {
                     return (
-                        <div className = 'Card' key={team.id}>
-                            <div className = 'CardBody'>
-                                <h5 className = 'CardTitle'>Team Name: {team.name}</h5>
-                                <h6 className = 'CardSubtitle'>Team Lead Id: {team.teamLead}</h6>
-                                <li><Link to={`/teamMembers/${team.id}`}>Click to see Team Member List</Link></li>
+                        <div className = 'card' key={team.id}>
+                            <div className = 'card-body'>
+                                <ul>
+                                    <h5 className = 'card-title'>Team Name: {team.name}</h5>
+                                    <h6 className = 'card-subtitle'>Team Lead Id: {team.teamLead}</h6>
+                                    <li><Link to={`/teamMembers/${team.id}/${team.name}`}>Click to see Team Member List</Link></li>
+                                </ul>
                             </div>
                         </div>
                     )
