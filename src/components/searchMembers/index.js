@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 class SearchTeams extends Component {
 
@@ -29,9 +28,6 @@ class SearchTeams extends Component {
   }
 
   render(){
-    const styleInfo = {
-      paddingRight:'10px'
-    }
     const elementStyle ={
       border:'solid',
       borderRadius:'10px',
@@ -43,8 +39,9 @@ class SearchTeams extends Component {
       marginBottom:'10vh'
     }
     const items = this.state.users.filter((data)=>{
-      if(this.state.search == null)
+      if(this.state.search == null){
           return data
+      }
       else if(data.userId.includes(this.state.search)){
           return data
       }

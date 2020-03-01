@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'proptypes';
 import { connect } from 'react-redux';
-import Spinner from 'react-spinner-material';
 import getMembers from '../../store/actions/userActions';
 
 class Members extends Component {

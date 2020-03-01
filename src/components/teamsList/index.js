@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import PropTypes from 'proptypes';
-import { connect } from 'react-redux';
-import Spinner from 'react-spinner-material';
-import getTeams from '../../store/actions/teamActions';
 import { Link } from 'react-router-dom';
-import {
-  Container, Row, Col, Navbar, NavbarBrand, Nav, NavItem, NavLink, Card, CardBody, CardTitle, CardSubtitle, CardText, Button
-} from 'reactstrap';
 
 class Teams extends Component {
     state = {
@@ -59,13 +52,4 @@ class Teams extends Component {
     }
 }
 
-Teams.propTypes = {
-    getTeams: PropTypes.func.isRequired,
-
-}
-
-const mapStateToProps = state => ({
-    teams: state.teams
-})
-
-export default connect(mapStateToProps, { getTeams })(Teams);
+export default Teams;
